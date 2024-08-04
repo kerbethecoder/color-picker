@@ -3,14 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/helper.css" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
     <title>Color Picker</title>
   </head>
   <body>
-    <label for="chosenColor">Pick your poison:</label>&nbsp;
-    <input type="color" id="chosenColor" value="#1A1A1A" />
+    <div class="wrapper__color-input">
+      <label for="chosenColor" class="label__color-input"
+        >Pick your poison:</label
+      >
+      <input type="color" id="chosenColor" value="#1A1A1A" />
+    </div>
+    <div class="wrapper__color-results flexCenter">
+      <div class="flex transparent gap-10">
+        <p class="para__color-results">HEX Code:</p>
+        <code id="colorCode" class="code__color-results uppercase"
+          >#1A1A1A</code
+        >
+      </div>
+      <div class="flex transparent gap-10">
+        <p class="para__color-results">RGB Code:</p>
+        <code id="rgbCode" class="code__color-results">rgb(0, 0, 0)</code>
+      </div>
+      <div class="flex transparent gap-10">
+        <p class="para__color-results">HSL Code:</p>
+        <code id="hslCode" class="code__color-results">hsl(0, 0, 0)</code>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
